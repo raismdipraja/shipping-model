@@ -24,7 +24,13 @@ const Op = Sequelize.Op;
 
 //3. import all model dan store di variable models
 const models = {
-      orderShipping : sequelize.import('./orderShipping.model')
+      orderShipping : sequelize.import('./orderShipping.model'),
+      order : sequelize.import('./order.model'),
+      address : sequelize.import('./address.model'),
+      expedition : sequelize.import('./expedition.model'),
+      status : sequelize.import('./status.model')
+
+
 };
 
 //4. create relation OneToMany | ManyToMany

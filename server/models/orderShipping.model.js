@@ -70,6 +70,15 @@ const orderShipping = (sequelize,DataTypes)=>{
         },
       ]
     });
+
+    OrderShipping.associate = models => {
+      OrderShipping.belongsTo(models.order,{foreignKey: 'oship_order_name'});
+      OrderShipping.belongsTo(models.address,{foreignKey: 'oship_addr_id'});
+      OrderShipping.belongsTo(models.expedition,{foreignKey: 'oship_expe_id'});
+      OrderShipping.belongsTo(models.status,{foreignKey: 'oship_stat_name'});
+
+    }
+
       return OrderShipping;
 }
 export default orderShipping

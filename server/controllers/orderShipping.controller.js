@@ -1,6 +1,23 @@
 // view data
 const readOrderShippingMethod = async (req, res)=>{
-    const orderShipping = await req.context.models.orderShipping.findAll();
+    const orderShipping = await req.context.models.orderShipping.findAll(
+        {
+            include: [
+                {
+                    model: req.context.models.order,
+                },
+                {
+                    model: req.context.models.address,
+                },
+                {
+                    model: req.context.models.expedition
+                },
+                {
+                    model: req.context.models.status
+                }
+        ]
+        }
+    );
     return res.send(orderShipping);
 }
 
