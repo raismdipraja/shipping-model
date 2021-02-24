@@ -4,9 +4,9 @@ import orderShippingCtrl from '../controllers/orderShipping.controller';
 const router = Router()
 
 router.get('/', orderShippingCtrl.readOrderShippingMethod);
-router.get('/:exroId', orderShippingCtrl.findOrderShippingMethod);
+router.get('/:oshipId', orderShippingCtrl.findOrderShippingMethod);
 router.post('/', orderShippingCtrl.addOrderShippingMethod);
-router.delete('/:exroId', orderShippingCtrl.deleteOrderShippingMethod);
-router.put('/:exroId', orderShippingCtrl.editOrderShippingMethod);
+router.delete('/:oshipId', orderShippingCtrl.deleteOrderShippingMethod);
+router.put('/:oshipId', orderShippingCtrl.editOrderShippingMethod);
 
 export default router;
