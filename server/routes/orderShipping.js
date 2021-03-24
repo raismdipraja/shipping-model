@@ -1,12 +1,12 @@
 import {Router} from 'express';
-import orderShippingCtrl from '../controllers/orderShipping.controller';
+import IndexController from '../controllers/IndexController';
 
 const router = Router()
 
-router.get('/', orderShippingCtrl.readOrderShippingMethod);
-router.get('/:oshipId', orderShippingCtrl.findOrderShippingMethod);
-router.post('/', orderShippingCtrl.addOrderShippingMethod);
-router.delete('/:oshipId', orderShippingCtrl.deleteOrderShippingMethod);
-router.put('/:oshipId', orderShippingCtrl.editOrderShippingMethod);
+router.get('/', IndexController.orderShipping.readOrderShippingMethod);
+router.get('/:oshipId', IndexController.orderShipping.findOrderShippingMethod);
+router.post('/', IndexController.orderShipping.addOrderShippingMethod);
+router.delete('/:oshipId', IndexController.orderShipping.deleteOrderShippingMethod);
+router.put('/:oshipId', IndexController.orderShipping.editOrderShippingMethod);
 
 export default router;
