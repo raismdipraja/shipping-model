@@ -6,8 +6,14 @@
 
 
 import orderShipping from './orderShipping';
+import order from './order';
+import filterOrder from './filterRoute'
+import searchOrder from './searchRoute'
 
 
 export default {
-    orderShipping
+    orderShipping,
+    order,
+    filterOrder,
+    searchOrder
 };

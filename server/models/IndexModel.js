@@ -14,6 +14,8 @@ const sequelize = new Sequelize(
     host: '104.198.212.208'
   },
 );
+// 104.198.212.208
+// 192.168.100.254
 
 sequelize
 	.authenticate()

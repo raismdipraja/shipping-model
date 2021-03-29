@@ -40,6 +40,9 @@ app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')))
 
 // #2 add this script when you add other route
 app.use('/api/ordershipping', routes.orderShipping);
+app.use('/api/orders', routes.order)
+app.use('/api/order_filter', routes.filterOrder)
+app.use('/api/order_search', routes.searchOrder)
 
 
 // Catch unauthorised errors
